@@ -15,5 +15,7 @@ fi
 echo "creation du jar..."
 jar cf FrameworkSpringMVC.jar -C build/classes .
 
+mv FrameworkSpringMVC.jar /opt/Tomcat/webapps/testFramework/WEB-INF/lib/
+
 echo "termine..."
 echo "Fichier généré : FrameworkSpringMVC.jar"
