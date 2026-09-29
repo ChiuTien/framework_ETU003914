@@ -1,10 +1,9 @@
 #!/bin/bash
 
-echo "nettoyage..."
+clear
 rm -rf build
 mkdir -p build/classes
 
-echo "compilation..."
 javac -cp "lib/*" -d build/classes $(find . -name "*.java")
 
 if [ $? -ne 0 ]; then
@@ -12,8 +11,4 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-echo "creation du jar..."
 jar cf framework.jar -C build/classes .
-
-echo "termine..."
-echo "Fichier generer : framework.jar"
