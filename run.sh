@@ -13,9 +13,7 @@ if [ $? -ne 0 ]; then
 fi
 
 echo "creation du jar..."
-jar cf FrameworkSpringMVC.jar -C build/classes .
-
-mv FrameworkSpringMVC.jar /opt/Tomcat/webapps/testFramework/WEB-INF/lib/
+jar cf framework.jar -C build/classes .
 
 echo "termine..."
-echo "Fichier généré : FrameworkSpringMVC.jar"
+echo "Fichier generer : framework.jar"
